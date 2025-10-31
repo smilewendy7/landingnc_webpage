@@ -8,6 +8,9 @@
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
     />
 
+    <link rel="stylesheet" href="style.css">
+
+
     <title>Landing NC</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
@@ -16,24 +19,17 @@
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#1C160C]">
-            <div class="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48">
-              <img src="./pics/logo_landingNC.png" alt="登陆北卡 Logo" class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#1C160C] text-3xl font-bold leading-tight tracking-[-0.015em]"> Landing North Carolina &nbsp; &nbsp; 登陆北卡 </h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Groups</a>
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Donate</a>
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">News</a>
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Join</a>
-              <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Events</a>
-            </div>
-          </div>
-        </header>
+        
+        <!-- 使用 JavaScript 动态引入 header.html -->
+        <div id="header-placeholder"></div>
+        <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html => {
+            document.getElementById("header-placeholder").innerHTML = html;
+            });
+        </script>
+
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
@@ -169,12 +165,19 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- 页脚 Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </footer>
+
   </body>
 </html>
 

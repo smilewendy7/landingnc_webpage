@@ -1,0 +1,20 @@
+.footer {
+    background-color: #1a1818;  /* 深色背景 */
+    padding: 20px 0;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #cccccc;
+  }
