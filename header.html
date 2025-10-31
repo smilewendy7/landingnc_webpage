@@ -1,24 +1,57 @@
-<!-- header.html -->
 
+<!-- header.html -->
+<head>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  </head>
+  
+  <header class="bg-white border-b border-[#F4EFE6] px-4 py-3">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="./pics/logo_landingNC.png" alt="登陆北卡 Logo" class="h-12 sm:h-16 object-contain" />
+        <h2 class="text-[#1C160C] text-xl sm:text-2xl font-bold tracking-tight">
+          Landing North Carolina &nbsp; 登陆北卡
+        </h2>
+      </div>
+  
+      <!-- Hamburger 按钮 (mobile only) -->
+      <button id="menuToggle" class="sm:hidden text-[#1C160C] focus:outline-none text-2xl">
+        ☰
+      </button>
+  
+      <!-- Menu Links -->
+      <nav id="navLinks" class="hidden sm:flex gap-5 text-lg font-bold text-[#1C160C]">
+        <a href="/index.html">主页 - Home</a>
+        <!-- <a href="#">捐款 - Donate</a>
+        <a href="#">新闻 - News</a>
+        <a href="#">关于我们 - About</a> -->
+        <a href="/contact.html">联系我们 - Contact</a>
+        <!-- <a href="#">近期活动 - Events</a> -->
+      </nav>
+    </div>
+  
+    <!-- Mobile 菜单：默认隐藏 -->
+    <div id="mobileMenu" class="sm:hidden hidden flex-col mt-2 gap-2 text-[#1C160C] text-lg font-bold">
+      <a href="/index.html">主页 - Home</a>
+      <!-- <a href="#">捐款 - Donate</a>
+      <a href="#">新闻 - News</a> -->
+      <a href="/contact.html">联系我们 - Contact</a>
+      <!-- <a href="#">加入我们 - Join</a>
+      <a href="#">近期活动 - Events</a> -->
+    </div>
+  
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+  
+      toggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </header>
+  
   
 
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3">
-    <div class="flex items-center gap-4 text-[#1C160C]">
-        <div class="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48">
-        <img src="./pics/logo_landingNC.png" alt="登陆北卡 Logo" class="w-full h-full object-contain" />
-        </div>
-        <h2 class="text-[#1C160C] text-3xl font-bold leading-tight tracking-[-0.015em]"> Landing North Carolina &nbsp; &nbsp; 登陆北卡 </h2>
-    </div>
-    <div class="flex flex-1 justify-end gap-8">
-        <div class="flex items-center gap-9">
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="/index.html">Home</a>
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Donate</a>
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">News</a>
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">About</a>
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Join</a>
-        <a class="text-[#1C160C] text-sm font-medium leading-normal" href="#">Events</a>
-        </div>
-    </div>
-    </header>
+
 
 
