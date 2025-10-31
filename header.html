@@ -2,7 +2,7 @@
 <!-- header.html -->
 <head>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-  </head>
+</head>
   
   <header class="bg-white border-b border-[#F4EFE6] px-4 py-3">
     <div class="flex items-center justify-between">
@@ -31,7 +31,7 @@
     </div>
   
     <!-- Mobile 菜单：默认隐藏 -->
-    <div id="mobileMenu" class="sm:hidden hidden flex-col mt-2 gap-2 text-[#1C160C] text-lg font-bold">
+    <div id="mobileMenu" class="sm:hidden flex flex-col mt-2 gap-2 text-[#1C160C] text-lg font-bold">
       <a href="/index.html">主页 - Home</a>
       <!-- <a href="#">捐款 - Donate</a>
       <a href="#">新闻 - News</a> -->
@@ -41,12 +41,14 @@
     </div>
   
     <script>
-      const toggle = document.getElementById("menuToggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-  
-      toggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            toggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
     </script>
   </header>
   
